@@ -1,0 +1,14 @@
+show databases;
+SELECT * FROM employees WHERE birth_date < ‘19650101’;
+SELECT * FROM employees WHERE gender=‘f’ AND hire_date>‘19901231’;
+SELECT first_name, last_name FROM employees WHERE last_name LIKE ‘f%’ LIMIT 50;
+INSERT INTO employees (emp_no, birth_date, first_name, last_name, gender, hire_date) values (100, ‘19940922’, ‘Mariah’, ‘Jemmings’, ‘f’, ‘20090101’);
+INSERT INTO employees (emp_no, birth_date, first_name, last_name, gender, hire_date) values (101, ‘20200123’, ‘Valkyrie’, ‘Fox’, ‘f’, ‘20220101’);
+INSERT INTO employees (emp_no, birth_date, first_name, last_name, gender, hire_date) values (102, ‘19940415’, ‘Domonic’, ‘Fox’, ‘m’, ‘20220410);
+UPDATE employees SET first_name = ‘Bob’ WHERE emp_no = 10023;
+UPDATE employees SET hire_date = ‘20020101’ WHERE first_name LIKE ‘p%’ OR last_name LIKE 'p%';
+DELETE FROM employees WHERE emp_no < 10000;
+DELETE FROM employees WHERE emp_no = 10048;
+DELETE FROM employees WHERE emp_no = 10099;
+DELETE FROM employees WHERE emp_no = 10234;
+DELETE FROM employees WHERE emp_no = 20089;
